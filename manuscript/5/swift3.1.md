@@ -20,9 +20,17 @@ Swift 3.1 についてもこのあたりの時期に新しいバージョンの 
 
 ## ソースコードの互換性
 
-Swift はこれまでアップデートの度に破壊的変更が続いていて、特に 3.0 は過去最大の変更量になったため苦労させられた開発者も多かったが、3.0 を境に大きく安定化している。3.0.1・3.0.2 beta でも 3.0 で書かれたコードがそのままコンパイル出来るが、 3.1 でも同じく基本的にコードの変更無くコンパイル出来る予定である。ただ、これまで意図せずコンパイルが通ってしまっていたものを正すコンパイラーのバグフィックスは含まれる。もしその影響を受けるようなコードが書かれていた場合コンパイルエラーになってしまうが、これもかなり限定的でほとんどのプロジェクトは 3.0 から一切のコードの変更無く 3.1 でコンパイルが通るはずである。このソースコード互換性ポリシーは、 3.1 に限らず、それ以降の3系でも同様である。
+### Swift 3.0 を境にソースコード互換性が大きく向上し、 3.1 対応では基本的にコードの変更不要になる
 
-Swift 4.0 に向けても互換性は大事にされていくが、多少の破壊的変更が含まれてしまうことが予定されている(とはいえ、3 の時の変更に比べると遙かに少なく済むはずである)。また、 [SR-2582: Add -swift-version command line flag](https://bugs.swift.org/browse/SR-2582) の対応によって、Swift 4のコンパイラーは、フラグを指定することでSwift 3 のコードのままコンパイルも可能となる。
+Swift はこれまでアップデートの度に破壊的変更が続いていて、マイナーアップデートでも毎度必ず破壊的変更を含んでおり、特に 3.0 は過去最大の変更量になったため苦労させられた開発者も多かったが、3.0 を境に大きく安定化している。3.0.1・3.0.2 beta でも 3.0 で書かれたコードがそのままコンパイル出来るが、 3.1 でも同じく基本的にコードの変更無くコンパイル出来る予定である。ただ、これまで意図せずコンパイルが通ってしまっていたものを正すコンパイラーのバグフィックスは含まれる。もしその影響を受けるようなコードが書かれていた場合コンパイルエラーになってしまうが、これもかなり限定的でほとんどのプロジェクトは 3.0 から一切のコードの変更無く 3.1 でコンパイルが通るはずである。
+
+つまり、Swift 3.1 はソースコード互換性について注力された初のマイナーアップデートであり、Chris Lattner氏も次のように言及している。
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Swift 3.1 is the first release to benefit from the new era of source compatibility, a result of swift-evolution refining and polishing 3.0! <a href="https://t.co/B3nNYABM3H">https://t.co/B3nNYABM3H</a></p>&mdash; Chris Lattner (@clattner_llvm) <a href="https://twitter.com/clattner_llvm/status/807368728048324608">December 9, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Swift 4 でのソースコード互換性
+
+Swift 3.1 の話から少し脱線するが、4.0 でのソースコード互換性についても触れておきたい。4.0 に向けても互換性は大事にされていくが、多少の破壊的変更が含まれてしまうことが予定されている(とはいえ、3 の時の変更に比べると遙かに少なく済むはずである)。また、 [SR-2582: Add -swift-version command line flag](https://bugs.swift.org/browse/SR-2582) の対応によって、Swift 4のコンパイラーは、フラグを指定することでSwift 3 のコードのままコンパイルも可能となる。
 
 - `-swift-version 3`: Swift 3 のコードのままコンパイル可能とするフラグ
 - `-swift-version 4`: Swift 4 非互換の書き方がなされていた場合、コンパイルエラーとなる(無指定の場合と同じ)
@@ -35,10 +43,6 @@ Swift 4.0 に向けても互換性は大事にされていくが、多少の破�
 - Swift 4未対応のライブラリを `-swift-version 3` にてビルドして、それを Swift 4対応済みで `-swift-version 4` 設定のプロジェクトにて利用可能
 
 上記の Swift のソースコード互換性およびそれに対する考えは、[[swift-evolution] Details of what source compatibility with Swift 3 means](https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20161128/029099.html) に詳細に書かれている。
-
-また、Chris Lattner氏も、Swift のソースコード互換性について、次のように言及している。
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Swift 3.1 is the first release to benefit from the new era of source compatibility, a result of swift-evolution refining and polishing 3.0! <a href="https://t.co/B3nNYABM3H">https://t.co/B3nNYABM3H</a></p>&mdash; Chris Lattner (@clattner_llvm) <a href="https://twitter.com/clattner_llvm/status/807368728048324608">December 9, 2016</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Swift 3.1 beta版の配布法
 
