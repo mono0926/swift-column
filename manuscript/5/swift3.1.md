@@ -5,7 +5,7 @@
 現時点での Swift の正式最新版は 3.0.1 であり、着々と次期バージョンの開発が進んでいる。また、12月9日に Swift 3.1 のリリースプロセスの公式アナウンスもあった。今回は現在進行している Swift の開発状況、および Swift 3.1 に含まれる変更内容などを紹介していく。
 
 
-# [Swift 3.1 Release Process](https://swift.org/blog/swift-3-1-release-process/)の紹介
+# [Swift 3.1 Release Process](https://swift.org/blog/swift-3-1-release-process/) の紹介
 
 12月9日に [Swift 3.1 Release Process](https://swift.org/blog/swift-3-1-release-process/) という Swift 3.1 リリースプロセスの公式アナウンスがあったので紹介する。
 
