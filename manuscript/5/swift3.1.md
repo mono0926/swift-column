@@ -121,10 +121,11 @@ $ swift --version
 Target: x86_64-apple-macosx10.9
 ```
 
-副作用など気になってやはり `swiftenv` を消したくなることもありえると思うが、その場合次のコマンドでアンインストール出来る。
+副作用など気になってやはり `swiftenv` を消したくなることもありえると思うが、その場合`bash_profile`に記述した設定を削除し、次のコマンド実行でアンインストール出来る。
 
 ```
 $ rm -fr ~/.swiftenv
+$ brew uninstall swiftenv
 ```
 
 [Swift 3.1 を先取り👀 - Qiita](http://qiita.com/mono0926/items/0667f6b99adeaec1e231) にて、[IBM Swift Sandbox BETA](https://swiftlang.ng.bluemix.net/) を使う別解などにも触れたので、興味あればそちらもご覧いただきたい。
