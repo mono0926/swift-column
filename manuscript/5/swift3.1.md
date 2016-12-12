@@ -101,7 +101,7 @@ $ export TOOLCHAINS=swift
 
 ## 方法3: [kylef/swiftenv: Swift Version Manager](https://github.com/kylef/swiftenv) を利用
 
-[rbenv](https://github.com/rbenv/rbenv)・[pyenv](https://github.com/yyuu/pyenv) と同じ感覚で、複数のSwiftバージョンを使い分けることが出来るようになる [kylef/swiftenv](https://github.com/kylef/swiftenv) もある。Snapshot版だけでなく、複数のXcode同梱のSwiftのバージョンの切り替えにも対応していて便利である(通常、XcodeアプリのGUIで切り替えたり、`sudo xcode-select -s` などのコマンド操作が必要)。
+[rbenv](https://github.com/rbenv/rbenv)・[pyenv](https://github.com/yyuu/pyenv) と同じ感覚で、複数のSwiftバージョンを使い分けることが出来るようになる [kylef/swiftenv](https://github.com/kylef/swiftenv) もある。Snapshot版だけでなく、複数のXcode同梱のSwiftのバージョンの切り替えにも対応していて便利である(通常、XcodeアプリのGUIで切り替え・`sudo xcode-select -s`コマンド・`DEVELOPER_DIR`環境変数セット、のいずれかの操作が必要)。
 
 [Homebrew](http://brew.sh)でインストールし、`swiftenv` をロードするように `bash_profile` などに設定を記述すれば使えるようになる。
 
