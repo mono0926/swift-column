@@ -86,7 +86,7 @@ Xcode 上で Snapshots版の Swift を使いたい場合は、これを選ぶだ
 
 
 ```
-$ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}
+$ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${PATH}"
 ```
 
 もちろん、任意の古いSnapshots版を使いたい場合は、シンボリックリンクではなく明示的にその版の指定が必要である。
