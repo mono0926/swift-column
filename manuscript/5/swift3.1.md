@@ -2,7 +2,7 @@
 
 ---
 
-現時点での Swift の正式最新版は 3.0.1 であり、着々と次期バージョンの開発が進んでいる。また、12月9日に Swift 3.1 のリリースプロセスの公式アナウンスもあった。今回は現在進行している Swift の開発状況、および Swift 3.1 に含まれる変更内容などを紹介していく。
+現時点での Swift の正式最新版は 3.0.2 であり、着々と次期バージョンの開発が進んでいる。また、12月9日に Swift 3.1 のリリースプロセスの公式アナウンスもあった。今回は現在進行している Swift の開発状況、および Swift 3.1 に含まれる変更内容などを紹介していく。
 
 
 # [Swift 3.1 Release Process](https://swift.org/blog/swift-3-1-release-process/) の紹介
@@ -22,7 +22,7 @@ Swift 3.1 についてもこのあたりの時期に新しいバージョンの 
 
 ### Swift 3.0 を境にソースコード互換性が大きく向上し、 3.1 対応では基本的にコードの変更不要になる
 
-Swift はこれまでアップデートの度に破壊的変更が続いていて、マイナーアップデートでも毎度必ず破壊的変更を含んでおり、特に 3.0 は過去最大の変更量になったため苦労させられた開発者も多かったが、3.0 を境に大きく安定化している。3.0.1・3.0.2 beta でも 3.0 で書かれたコードがそのままコンパイル出来るが、 3.1 でも同じく基本的にコードの変更無くコンパイル出来る予定である。ただ、これまで意図せずコンパイルが通ってしまっていたものを正すコンパイラーのバグフィックスは含まれる。もしその影響を受けるようなコードが書かれていた場合コンパイルエラーになってしまうが、これもかなり限定的でほとんどのプロジェクトは 3.0 から一切のコードの変更無く 3.1 でコンパイルが通るはずである。
+Swift はこれまでアップデートの度に破壊的変更が続いていて、マイナーアップデートでも毎度必ず破壊的変更を含んでおり、特に 3.0 は過去最大の変更量になったため苦労させられた開発者も多かったが、3.0 を境に大きく安定化している。3.0.1・3.0.2 、ともに 3.0 で書かれたコードがそのままコンパイル出来るが、 3.1 でも同じく基本的にコードの変更無くコンパイル出来る予定である。ただ、これまで意図せずコンパイルが通ってしまっていたものを正すコンパイラーのバグフィックスは含まれる。もしその影響を受けるようなコードが書かれていた場合コンパイルエラーになってしまうが、これもかなり限定的でほとんどのプロジェクトは 3.0 から一切のコードの変更無く 3.1 でコンパイルが通るはずである。
 
 つまり、Swift 3.1 はソースコード互換性について注力された初のマイナーアップデートであり、Chris Lattner氏も次のように言及している。
 
@@ -30,7 +30,7 @@ Swift はこれまでアップデートの度に破壊的変更が続いてい�
 
 ### Swift 4 でのソースコード互換性
 
-Swift 3.1 の話から少し脱線するが、4.0 でのソースコード互換性についても触れておきたい。4.0 に向けても互換性は大事にされていくが、多少の破壊的変更が含まれてしまうことが予定されている(とはいえ、3 の時の変更に比べると遙かに少なく済むはずである)。また、 [SR-2582: Add -swift-version command line flag](https://bugs.swift.org/browse/SR-2582) の対応によって、Swift 4のコンパイラーは、フラグを指定することでSwift 3 のコードのままコンパイルも可能となる。
+Swift 3.1 の話から少し脱線するが、4.0 でのソースコード互換性についても触れておきたい。4.0 に向けても互換性は大事にされていくが、多少の破壊的変更が含まれてしまうことが予定されている(とはいえ、3.0 の時の変更に比べると遙かに少なく済むはずである)。また、 [SR-2582: Add -swift-version command line flag](https://bugs.swift.org/browse/SR-2582) の対応により、Swift 4 のコンパイラーは、フラグを指定することでSwift 3 のコードのままコンパイルも可能となる。
 
 - `-swift-version 3`: Swift 3 のコードのままコンパイル可能とするフラグ
 - `-swift-version 4`: Swift 4 非互換の書き方がなされていた場合、コンパイルエラーとなる(無指定の場合と同じ)
@@ -48,7 +48,7 @@ Swift 3.1 の話から少し脱線するが、4.0 でのソースコード互換
 
 これまでの開発中の Swift は、ある程度安定したタイミングで定期的に [Preview版](https://swift.org/download/#previews) として配布してきたが、3.1 の開発中はそれをせずに [Snapshots版](https://swift.org/download/#snapshots) としてのみ配布していくとのことである。Preview版として配布していくやり方では、しばしば不定期に配布のタイミングが大きく空いてしまうことがあったため、新しい機能の仕様・バグ修正確認などのフィードバックサイクルがうまく回りにくかった、などの問題があったことが挙げられている。
 
-Snapshots版は、[継続的インテグレーションの仕組み](https://ci.swift.org)の上で出力されており高い頻度で自動的に更新されていくので、それを利用して開発版最新の Swift を試していける。また、Snapshots版は 300MBほどと比較的軽量(Xcode版Snapshot)なので、 4.5GB程度とサイズの大きな Xcode 本体と比べて気軽に更新可能である。
+Snapshots版は、[継続的インテグレーションの仕組み](https://ci.swift.org)の上で出力されており高い頻度で自動的に更新されていくので、それを利用して開発版最新の Swift を試していける。また、Snapshots版は 300MBほどと比較的軽量(Xcode版Snapshotsの場合)なので、 4.5GB程度とサイズの大きな Xcode 本体と比べて気軽に更新可能である。
 
 ## Swift 3.1 〜 4 の開発プロセス
 
@@ -66,21 +66,19 @@ Snapshots版は、[継続的インテグレーションの仕組み](https://ci.
 - `master`ブランチ: Swift 4 開発
 - `swift-3.1-branch` ブランチ: Swift 3.1 リリース向けての開発
 
-また、Swift 3.1 と同じく今ベータ状態の 3.0.2 は [`swift-3.0.2-PREVIEW-1` タグ](https://github.com/apple/swift/releases/tag/swift-3.0.2-PREVIEW-1)が11月16日に切られて以降、 Xcode 8.2 beta 2 とともに更新がまったく無い状態が続いている。Swift 3.0.2 に含める小さな修正はすでに済んでおり、他の iOS・macOS Sierra などの次期アップデートと足並み揃えるなどして、近々リリースされるであろう。
+[Swift 3.1 Release Process](https://swift.org/blog/swift-3-1-release-process/) の後半には、Swift 3.1 開発に向けての Pull Request の仕方などが載っているが、本記事では割愛する。
 
-[Swift 3.1 Release Process](https://swift.org/blog/swift-3-1-release-process/) の後半には、Swift 3.1 開発に向けてのPull Requestの仕方などが載っているが、本記事では割愛する。
-
-# Snapshots版 Swiftの利用法
+# Snapshots版 Swift の利用法
 
 上で Swift 3.1 を今試してみるには Snaphots版 を使う必要があることを述べたが、ここでは macOS でそれを利用する方法を紹介しよう。
 
 まずは、[Snapshots版](https://swift.org/download/#snapshots)をダウンロード・インストールする。
 
-すると、`/Library/Developer/Toolchains/` 配下に `swift-DEVELOPMENT-SNAPSHOT-2016-12-09-a.xctoolchain` のようなディレクトリが配置されるとともに、Xcode アプリ上で Toolchains から選択出来るようになる。
+すると、`/Library/Developer/Toolchains/` 配下に `swift-DEVELOPMENT-SNAPSHOT-2016-12-09-a.xctoolchain` のような toolchain ディレクトリが配置されるとともに、Xcode アプリ上で Toolchains メニューから選択出来るようになる。
 
 ![](images/toolchain.png)
 
-Xcode 上で Snapshots版の Swift を使いたい場合は、これを選ぶだけで良い。ただ、試したあと、元の正式版に戻しておかないと通常の開発時のトラブルの原因になりかねないので、注意が必要である。
+Xcode 上で Snapshots版の Swift を使いたい場合は、ここから選ぶだけで良い。ただ、試したあと、元の正式版に戻しておかないと通常の開発時のトラブルの原因になりかねないので、注意が必要である。
 
 コマンドライン上で使いたい場合は、いくつか方法がある。
 
@@ -95,7 +93,7 @@ $ export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:"${
 
 もちろん、任意の古いSnapshots版を使いたい場合は、シンボリックリンクではなく明示的にその版の指定が必要である。
 
-## 方法2: `TOOLCHAINS` に `swift` をセットする
+## 方法2: 環境変数 `TOOLCHAINS` に `swift` をセットする
 
 次のコマンドだけでSnapshots最新版を使えるようになる。
 
@@ -105,9 +103,9 @@ $ export TOOLCHAINS=swift
 
 ## 方法3: [kylef/swiftenv: Swift Version Manager](https://github.com/kylef/swiftenv) を利用
 
-[rbenv](https://github.com/rbenv/rbenv)・[pyenv](https://github.com/yyuu/pyenv) と同じ感覚で、複数のSwiftバージョンを使い分けることが出来るようになる [kylef/swiftenv](https://github.com/kylef/swiftenv) もある。Snapshot版だけでなく、複数のXcode同梱のSwiftのバージョンの切り替えにも対応していて便利である(通常、XcodeアプリのGUIで切り替え・`sudo xcode-select -s`コマンド・`DEVELOPER_DIR`環境変数セット、のいずれかの操作が必要)。
+[kylef/swiftenv](https://github.com/kylef/swiftenv) を使うことで [rbenv](https://github.com/rbenv/rbenv)・[pyenv](https://github.com/yyuu/pyenv) と同じ感覚で、複数のSwiftバージョンを使い分けることが出来るようになる。Snapshot版だけでなく、複数のXcode同梱のSwiftのバージョンの切り替え(通常、XcodeアプリのGUIで切り替え・`sudo xcode-select -s`コマンド・`DEVELOPER_DIR`環境変数セット、のいずれかの操作が必要)にも対応していて便利である。
 
-[Homebrew](http://brew.sh)でインストールし、`swiftenv` をロードするように `bash_profile` などに設定を記述すれば使えるようになる。
+[Homebrew](http://brew.sh) でインストールし、`swiftenv` をロードするように `bash_profile` などに設定を記述すれば使えるようになる。
 
 ```sh
 $ brew install kylef/formulae/swiftenv
@@ -125,7 +123,7 @@ $ swift --version
 Target: x86_64-apple-macosx10.9
 ```
 
-便利ではあるものの、公式のやり方では無いのでその点の注意は必要である。副作用など気になってやはり `swiftenv` を消したくなることもありえると思うが、その場合`bash_profile`に記述した設定を削除し、次のコマンド実行でアンインストール出来る。
+便利ではあるものの、公式のやり方では無いのでその点の注意は必要である。副作用など気になってやはり `swiftenv` を消したくなることもありえると思うが、その場 `bash_profile` に記述した設定を削除し、次のコマンド実行でアンインストール出来る。
 
 ```
 $ rm -fr ~/.swiftenv
