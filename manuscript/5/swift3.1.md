@@ -74,7 +74,7 @@ Snapshots版は、[継続的インテグレーションの仕組み](https://ci.
 
 まずは、[Snapshots版](https://swift.org/download/#snapshots)をダウンロード・インストールする。
 
-すると、`/Library/Developer/Toolchains/` 配下に `swift-DEVELOPMENT-SNAPSHOT-2016-12-09-a.xctoolchain` のような toolchain ディレクトリが配置されるとともに、Xcode アプリ上で Toolchains メニューから選択出来るようになる。
+すると、`/Library/Developer/Toolchains/` 配下に `swift-DEVELOPMENT-SNAPSHOT-2016-12-13-a.xctoolchain` のような toolchain ディレクトリが配置されるとともに、Xcode アプリ上で Toolchains メニューから選択出来るようになる。
 
 ![](images/toolchain.png)
 
