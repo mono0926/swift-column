@@ -129,7 +129,4 @@ Target: x86_64-apple-macosx10.9
 $ rm -fr ~/.swiftenv
 $ brew uninstall swiftenv
 ```
-
-開発版の Swift に触れる別のやり方として、[Swift 3.1 を先取り👀 - Qiita](http://qiita.com/mono0926/items/0667f6b99adeaec1e231) にて、[IBM Swift Sandbox BETA](https://swiftlang.ng.bluemix.net/) を使う方法などにも触れたので、興味あればそちらもご覧いただきたい。
-
 後編では、Swift 3.1 に含まれる変更内容を、上で説明したSnapshots版で試しながら説明していく。
