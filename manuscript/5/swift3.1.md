@@ -74,7 +74,7 @@ Snapshots版は、[継続的インテグレーションの仕組み](https://ci.
 
 まずは、[Snapshots版](https://swift.org/download/#snapshots)をダウンロード・インストールする。
 
-すると、`/Library/Developer/Toolchains/` 配下に `swift-DEVELOPMENT-SNAPSHOT-2016-12-13-a.xctoolchain` のような toolchain ディレクトリが配置されるとともに、Xcode アプリ上で Toolchains メニューから選択出来るようになる。
+すると、`/Library/Developer/Toolchains/` 配下に `swift-DEVELOPMENT-SNAPSHOT-2016-12-15-a.xctoolchain` のような toolchain ディレクトリが配置されるとともに、Xcode アプリ上で Toolchains メニューから選択出来るようになる。
 
 ![](images/toolchain.png)
 
@@ -115,11 +115,11 @@ $ echo 'if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi' >> ~/
 例えば、そのディレクトリでは特定のSnapshot版を使いたい場合は次のように使う。
 
 ```sh
-$ swiftenv local DEVELOPMENT-SNAPSHOT-2016-12-09-a
+$ swiftenv local DEVELOPMENT-SNAPSHOT-2016-12-15-a
 $ cat .swift-version 
-→ DEVELOPMENT-SNAPSHOT-2016-12-09-a
+→ DEVELOPMENT-SNAPSHOT-2016-12-15-a
 $ swift --version
-→ Apple Swift version 3.0-dev (LLVM eb108553a5, Clang 94b9e5191c, Swift df7ad7cb12)
+→ Apple Swift version 3.0-dev (LLVM 217eb6c2b6, Clang 34a98ce92e, Swift 1eb5648c46)
 Target: x86_64-apple-macosx10.9
 ```
 
