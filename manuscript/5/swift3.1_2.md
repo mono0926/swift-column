@@ -85,7 +85,7 @@ x.drop { $0 < 3 } // [3, 4, 5]
 x.reversed().drop { $0 < 3 } // [5, 4, 3, 2, 1]
 ```
 
-この `prefix(while:)`・`drop(while:)` の追加は、5月に作られた SE-0045 という古めの Proposalというのを見ても分かる通り、Swift 3.1 の目玉の変更ではなく、単に Swift 3.0 に間に合わなかったのが、ようやく Swift 3.1 のタイミングで入ることになったということである。単なるメソッドの追加なので、 Swift 3.0 に詰め込みたかった破壊的変更の絡む変更と比べて優先度が低かったためである。
+この `prefix(while:)`・`drop(while:)` の追加は、5月に作られた SE-0045 という古めの Proposalというのを見ても分かる通り、Swift 3.1 の目玉の変更ではなく、単に Swift 3.0 に間に合わなかったのが、ようやく Swift 3.1 のタイミングで入ることになったということである。単なるメソッドの追加なので、 Swift 3.0 に詰め込みたかった破壊的変更の絡む変更と比べて優先度が低かったため対応が遅れた。
 
 ## [SE-0141: `@available`構文においてのSwift バージョン分岐](https://github.com/apple/swift-evolution/blob/master/proposals/0141-available-by-swift-version.md)
 
