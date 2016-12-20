@@ -70,7 +70,7 @@ Snapshots版は、[継続的インテグレーションの仕組み](https://ci.
 
 # Snapshots版 Swift の利用法
 
-上で Swift 3.1 を今試してみるには Snaphots版 を使う必要があることを述べたが、ここでは macOS でそれを利用する方法を紹介しよう。
+上で Swift 3.1 を今試してみるには Snaphots版 を使う必要がある(ただし、しばらくしたら Xcode 8.3 beta がリリースされて、Snapshots版使わずともある程度試せるようになるかもしれない)ことを述べたが、ここでは macOS でそれを利用する方法を紹介しよう。
 
 まずは、[Snapshots版](https://swift.org/download/#snapshots)をダウンロード・インストールする。
 
@@ -133,4 +133,4 @@ $ brew uninstall swiftenv
 また、[IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)でも、比較的新しめのSnapshots版(12月20日執筆時点で `Dev Build (Dec 15, 2016)`)を選択出来るので、よりお手軽にWeb上で試すことが出来る。この IBM Swift Sandbox に関しては、[Swift 3.1 を先取り👀 - Qiita](http://qiita.com/mono0926/items/0667f6b99adeaec1e231) にて触れている。
 
 
-後編では、Swift 3.1 に含まれる変更内容を、上で説明したSnapshots版で試しながら説明していく。
+後編では、Swift 3.1 に含まれる変更内容を、上で説明したSnapshots版で試しながら紹介していく。
