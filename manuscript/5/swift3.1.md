@@ -129,4 +129,8 @@ Target: x86_64-apple-macosx10.9
 $ rm -fr ~/.swiftenv
 $ brew uninstall swiftenv
 ```
+
+また、[IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)でも、比較的新しめのSnapshots版(12月20日執筆時点で `Dev Build (Dec 15, 2016)`)を選択出来るので、よりお手軽にWeb上で試すことが出来る。この IBM Swift Sandbox に関しては、[Swift 3.1 を先取り👀 - Qiita](http://qiita.com/mono0926/items/0667f6b99adeaec1e231) にて触れている。
+
+
 後編では、Swift 3.1 に含まれる変更内容を、上で説明したSnapshots版で試しながら説明していく。

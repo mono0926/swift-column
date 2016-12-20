@@ -43,24 +43,6 @@ Swift に組み込むことは決定しているが、まだ実装着手に至�
 
 - [SE-0147: ](https://github.com/apple/swift-evolution/blob/master/proposals/0147-move-unsafe-initialize-from.md)
 
-# Swift 3.1 のToolchains版を使えるようにする
-
-TODO消すかも
-
-Xcode の設定で Toolchain を変更して Playground で試しても良いですが、せっかくなので前編でとりあげた [kylef/swiftenv](https://github.com/kylef/swiftenv) を使ってみましょう。
-
-以下では、元々コマンドライン上の Swift が Xcode 8.1 付属の Swift 3.1 だったのを `swiftenv local DEVELOPMENT-SNAPSHOT-2016-12-14-a` を実行することで、Toolchains版を使えるように変更しています。バージョイン表記が `3.1-dev` などではなく `3.0-dev` となっていますが、今後の版では変わるかもしれません。
-
-```sh
-$ sample git:(swift-3.1) ✗ swiftenv local DEVELOPMENT-SNAPSHOT-2016-12-14-a
-$ sample git:(swift-3.1) ✗ swift --version      
-→ Apple Swift version 3.0-dev (LLVM a00a468bc7, Clang d6d5b695de, Swift ca165e5c4a)
-Target: x86_64-apple-macosx10.9
-```
-
-というわけで、以下 `DEVELOPMENT-SNAPSHOT-2016-12-14-a` の Swift を使って、Swift 3.1 の変更内容をなぞっていきますが、これ以降のSnopshots版であれば動くはずです。
-
-また、[IBM Swift Sandbox](https://swiftlang.ng.bluemix.net/)でも、すでに同等のバージョンである`Dev Build (Dec 9, 2016)`を選択出来るので、よりお手軽にWeb上で試すことが出来ます。この IBM Swift Sandbox に関しては、[Swift 3.1 を先取り👀 - Qiita](http://qiita.com/mono0926/items/0667f6b99adeaec1e231) にて詳しく触れています。
 
 # Swift 3.1 の変更を先取り
 
