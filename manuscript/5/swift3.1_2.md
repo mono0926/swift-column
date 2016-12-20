@@ -236,14 +236,14 @@ extension OuterGeneric.InnerGeneric {}
 ## [SR-1882: 文字列補間(‘String interpolation‘)にOptional型を直接用いると警告](https://bugs.swift.org/browse/SR-1882)
 
 
-以下のコードでは `hello Optional("world")` という文字列が出力されます。
+以下のコードでは `hello Optional("world")` という文字列が出力される。
 
 ```swift
 let s: String? = "world"
 print("hello \(s)")
 ```
 
-このコードだけ見れば妥当ですが、通常のアプリでは意図せず `Optional` の変数を用いて文字列を組み立ててしまうミス(`hello world`とするつもりが`hello Optional("world")`になるなど)の発生に繋がります。
+このコードだけ見れば妥当な挙動だが、通常のアプリでは意図せず `Optional` の変数を用いて文字列を組み立ててしまうミス(`hello world`とするつもりが`hello Optional("world")`になるなど)の発生に繋がる。
 
 Swift 3.1 では以下の警告が発生するようになる。
 
