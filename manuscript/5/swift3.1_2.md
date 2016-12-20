@@ -229,7 +229,7 @@ extension OuterGeneric.InnerNonGeneric {}
 extension OuterGeneric.InnerGeneric {}
 ```
 
-ジェネリクスについては、2016年5月に、[[swift-evolution] [Manifesto] Completing Generics](https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20160229/011666.html)という声明がメーリングリストに投稿されていて、今の大きな課題の1つであった。
+ジェネリクスの制限については、2016年5月に、[[swift-evolution] [Manifesto] Completing Generics](https://lists.swift.org/pipermail/swift-evolution/Week-of-Mon-20160229/011666.html)という声明がメーリングリストに投稿されていて、今の大きな課題の1つであった。
 
 [SR-1009: 具体的な型を用いたジェネリクス制約](https://bugs.swift.org/browse/SR-1009)・[SR-1446: ジェネリクスの入れ子](https://bugs.swift.org/browse/SR-1446)の2件でその一部が解消して、これらの対応は Swift 3.1 の目玉の改善の1つと言えるだろう。まだ着手前であるが、[SE-0143: 条件付きのジェネリクス制約](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md)などまだ残件はあるが、今後もジェネリクスの制限は少しずつ改善されていくであろう。
 
